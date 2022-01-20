@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
-import generateMessage, { Message } from './Api';
+import { FC } from 'react';
+import { Header } from './components/ui/Header';
 
-const App: React.FC<{}> = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
+const App: FC<{}> = () => {
+    // const [messages, setMessages] = useState<Message[]>([]);
 
-  useEffect(() => {
-    const cleanUp = generateMessage((message: Message) => {
-      setMessages(oldMessages => [...oldMessages, message]);
-    });
-    return cleanUp;
-  }, [setMessages]);
+    // useEffect(() => {
+    //     const cleanUp = generateMessage((message: Message) => {
+    //         setMessages((oldMessages) => [...oldMessages, message]);
+    //     });
+    //     return cleanUp;
+    // }, [setMessages]);
 
-  return (
-    <div>
-      {messages?.map?.(msg => <div key={msg?.message}>{msg?.message}</div>)}
-    </div>
-  );
-}
+    return (
+        <div>
+            <Header text='nuffsaid.com Coding Challenge' />
+            {/* {messages?.map?.(msg => <div key={msg?.message}>{msg?.message}</div>)} */}
+        </div>
+    );
+};
 
 export default App;
