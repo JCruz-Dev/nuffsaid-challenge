@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
  }
   body {
+    margin-top: 3.75rem;
     min-height: 100vh;
   }
   h1, h2, h3, h4, h5, h6, p {
