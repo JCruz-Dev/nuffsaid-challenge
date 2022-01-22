@@ -9,7 +9,7 @@ const ItemStyled = styled(Card)<{ background: string }>`
     &.MuiPaper-root {
         background-color: ${(props) => props.background};
         margin-bottom: 1rem;
-        height: 80px;
+        min-height: 80px;
         padding: 1rem 0 0.5rem 1rem;
     }
     .MuiCardActions-root {
