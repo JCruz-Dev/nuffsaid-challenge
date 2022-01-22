@@ -8,7 +8,8 @@ import { Column } from '../Column';
 const GridStyled = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    column-gap: 1rem;
+    grid-gap: 1rem;
+    padding: 1rem;
 `;
 const ColumnsWrapper: FC = () => {
     const { messages, setMessages, showMessages } = useContext(AppContext);
