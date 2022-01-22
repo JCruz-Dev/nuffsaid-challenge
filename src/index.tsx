@@ -1,3 +1,5 @@
+import { Header } from 'components/ui/Header';
+import { AppContextProvider } from 'context/AppContext';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -7,7 +9,10 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
     <React.StrictMode>
         <GlobalStyle />
-        <App />
+        <Header text='nuffsaid.com Coding Challenge' />
+        <AppContextProvider>
+            <App />
+        </AppContextProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );
