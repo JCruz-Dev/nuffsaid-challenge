@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import { ColumnItemProps } from './type';
 
 const ItemStyled = styled(Card)<{ background: string }>`
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr auto;
     &.MuiPaper-root {
         background-color: ${(props) => props.background};
         margin-bottom: 1rem;
-        height: auto;
-        padding: 1rem 0 1rem 1rem;
+        height: 80px;
+        padding: 1rem 0 0.5rem 1rem;
     }
     .MuiCardActions-root {
         align-self: flex-end;
